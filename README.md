@@ -1,1 +1,1 @@
-![alt text](screen-boolando.png)
+![alt text](boolando-screenshot.png)
