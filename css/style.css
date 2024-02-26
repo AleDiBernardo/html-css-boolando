@@ -1,6 +1,9 @@
 /* ROOT */
 :root {
-
+    --orange-color: #FF6900;
+    --green-color: #008000;
+    --red-color: #FF0000;
+    --black-color: #1A1A1A;
 }
 
 /* RESET */
@@ -8,14 +11,87 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
+    font-size: 1.1rem;
 }
 
 /* IMG */
 img {
     width: 100%;
+    height: auto;
 }
 
-body {
-    /* Debug */
-    /* background-color: red; */
+
+/* UTILITIES */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 70%;
+    padding: 30px 0;
+}
+
+.row-dir {
+    flex-direction: row;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+/* HEADER */
+header {
+    background-color: var(--orange-color);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.nav {
+    column-gap: 20px;
+}
+
+.left-side,
+.right-side {
+    width: 25%;
+}
+
+.flex .left-side {
+    justify-content: flex-start;
+}
+
+.flex .right-side {
+    justify-content:flex-end;
+}
+
+.middle-side {
+    flex-grow: 1;
+}
+
+.logo {
+    width: 120px;
+}
+
+/* TAGS */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* MAIN */
+
+.card {
+    /* debug */
+    width: 200px;
+    height: 200px;
 }
