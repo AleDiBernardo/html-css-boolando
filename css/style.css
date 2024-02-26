@@ -4,6 +4,7 @@
     --green-color: #008000;
     --red-color: #FF0000;
     --black-color: #1A1A1A;
+    --white-color: #ffffff;
 }
 
 /* RESET */
@@ -11,13 +12,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
+    color: var(--white-color);
     font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* IMG */
 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -25,21 +27,32 @@ img {
 /* UTILITIES */
 .flex {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
 }
 
 .container {
     width: 70%;
+    height: 100vh;
     padding: 30px 0;
+    margin: auto;
+    /* background-color: #008000; */
 }
 
 .row-dir {
     flex-direction: row;
 }
 
+.col-dir {
+    flex-direction: column;
+}
+
 .gap-10 {
     gap: 10px;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 /* HEADER */
@@ -80,7 +93,7 @@ header {
 /* TAGS */
 a {
     text-decoration: none;
-    color: white;
+    color: var(--white-color);
 }
 
 li {
@@ -90,8 +103,94 @@ li {
 
 /* MAIN */
 
+.wrapper {
+    flex-wrap: wrap;
+}
+
+/* CARD */
 .card {
     /* debug */
-    width: 200px;
-    height: 200px;
+    width: calc(100% / 3);
+    height: 500px;
+    padding: 10px;
+    /* background-color: red; */
+}
+
+.img-container:hover .hover-img{
+    display: inline-block;
+}
+
+.img-container:hover .default-img {
+    display: none;
+}
+
+.img-container:hover .heart-btn {
+    color: var(--red-color);
+}
+
+/* image container */
+.img-container {
+    position: relative;
+}
+
+.hover-img {
+    display: none;
+}
+
+.heart-btn {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    
+    width: 40px;
+    height: 40px;
+    background-color: var(--white-color);
+    font-size: 2rem;
+    color: var(--black-color);
+}
+
+.flex .heart-btn {
+    justify-content: center;
+    align-items: center;
+}
+
+.tag {
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+
+}
+
+.sale-tag {
+    background-color: var(--red-color);
+    padding: 5px;
+}
+
+.sustainability-tag {
+    background-color: var(--green-color);
+    padding: 5px;
+
+}
+
+/* description */
+.brand-text {
+    color: grey;
+}
+
+.des-text {
+    color: var(--black-color);
+    text-transform: uppercase;
+}
+
+.after-discount {
+    color: var(--red-color);
+}
+
+.before-discount {
+    text-decoration: line-through;
+    color: var(--black-color);
+}
+
+.row {
+    margin: 120px;
 }
